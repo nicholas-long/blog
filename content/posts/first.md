@@ -12,3 +12,5 @@ I am testing integration with github actions, cron jobs, and webhooks in order t
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 echo "theme = 'ananke'" >> hugo.toml
 ```
+
+- Hugo quick start guide: https://gohugo.io/getting-started/quick-start/
