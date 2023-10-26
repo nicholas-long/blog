@@ -9,6 +9,14 @@ draft = false
 - link to environment: https://github.com/nicholas-long/environment
   - permalink to [post about this blog](https://github.com/nicholas-long/environment/tree/main/zet/20231025215645)
 
+## what i put in the environment
+- vim dotfiles
+- tmux dotfiles
+- bashrc and zshrc configuration scripts
+- useful scripts i need or come up with for specific purposes
+- shortcut commands that are available on the command line
+- install scripts to set it all up on multiple platforms and architectures
+
 ## using zettelkasten as a graph database for storing programs
 - having it structured like a zettelkasten makes it feel like it is coming alive
 This seems like the best way to store and work with all of my scripts while maintaining notes about them.
