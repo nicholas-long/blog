@@ -6,7 +6,12 @@ draft = false
 
 # About this Blog
 
-I am setting up my blog.
+## why i needed a blog
+I am setting up my blog in order to accomplish multiple things.
+I need a website to put on my resume, and it would be good practice to develop and work on deployment scripts.
+my thoughts on it were, i need a website to put on my resume, i could use a website to write about all the notes i’ve take on hacking, 3d printing, data engineering, whatever, and maybe i could even use a storefront for custom 3d prints.
+
+## creating
 I am testing integration with github actions, cron jobs, and webhooks in order to automate the deployment of this site.
 
 - the [blog source](https://github.com/nicholas-long/blog) is avaialable to view on github
