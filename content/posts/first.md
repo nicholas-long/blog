@@ -36,9 +36,6 @@ crontab -l
 One minute was fine for testing, but I think that is too frequent for actual use.
 
 - changing to five minutes
-
-I want the
-```bash
-crontab -l
+```crontab
 */5 * * * * cd ~/blog && ./pull-publish
 ```
