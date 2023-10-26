@@ -10,10 +10,17 @@ draft = false
 I am setting up my blog in order to accomplish multiple things.
 I need a website to put on my resume, and it would be good practice to develop and work on deployment scripts.
 I could also really use a website to write about all the notes i’ve take on hacking, 3d printing, and data engineering, and maybe i could even use a storefront for custom 3D prints.
+I am also testing integration with github actions, cron jobs, and webhooks in order to automate the deployment of this site.
 
-## creating
-I am testing integration with github actions, cron jobs, and webhooks in order to automate the deployment of this site.
+## testing jekyll
+I initially tried jekyll. 
+As of 2023-10-25, it was not working when installed from ruby gems or from the apt package manager.
+There was a dependency issue with one of the gems.
+I even tried running it in a docker, no dice.
+That's fine; I was not tied to any particular framework yet.
+I want to make sure that any markdown website generator I use will be portable enough to build the page on a server, and jekyll seems too sketchy.
 
+## creating with hugo
 - the [blog source](https://github.com/nicholas-long/blog) is avaialable to view on github
 
 I am testing hugo.
