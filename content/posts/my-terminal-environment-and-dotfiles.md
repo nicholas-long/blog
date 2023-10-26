@@ -21,8 +21,9 @@ Maintaining and working within it feels like being plugged directly into an enor
 - install scripts to set it all up on multiple platforms and architectures
 
 ## using zettelkasten as a graph database for storing programs
-- having it structured like a zettelkasten makes it feel like it is coming alive
-This seems like the best way to store and work with all of my scripts while maintaining notes about them.
+
+Having it structured like a zettelkasten makes it feel like it is coming alive
+Zettelkasten seems like the best way to store and work with all of my scripts while maintaining notes about them.
 The idea is that scripts and projects start expanding and growing in complexity, but they also tend to tie into each other.
 
 I can have notes about developing a script, example commands for running the script, and the script itself, all tied together in one place.
