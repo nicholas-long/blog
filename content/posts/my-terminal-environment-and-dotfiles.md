@@ -2,7 +2,7 @@
 title = 'My Terminal Environment and Dotfiles'
 date = 2023-10-26T15:03:29-05:00
 draft = false
-categories = linux terminal environment dotfiles scripts zettelkasten
+categories = ['linux', 'terminal', 'environment', 'dotfiles', 'scripts', 'zettelkasten']
 +++
 
 # what is my environment repository?

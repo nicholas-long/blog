@@ -2,7 +2,7 @@
 title = 'Zettelkasten Github TUI - ZKVR Project'
 date = 2023-10-27T12:36:27-05:00
 draft = false
-tags = zettelkasten
+tags = ['zettelkasten']
 +++
 
 # zkvr project

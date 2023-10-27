@@ -2,7 +2,7 @@
 title = 'About This Blog and Setting It Up'
 date = 2023-10-25T21:50:56-05:00
 draft = false
-categories = blog markdown
+categories = ['blog', 'markdown']
 +++
 
 # About this Blog
