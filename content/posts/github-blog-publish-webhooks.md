@@ -42,7 +42,7 @@ $ cat blog-webhook.cgi
 
 echo ""
 echo "updating blog..."
-if grep "SECRET-CODE-GOES-HERE" /dev/stdin; then
+if cat | grep "SECRET-GOES-HERE"; then
   nc localhost 8081
 else
   echo "You didn't say the magic word!"
