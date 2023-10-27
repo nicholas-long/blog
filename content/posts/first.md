@@ -47,8 +47,10 @@ One minute was fine for testing, but I think that is too frequent for actual use
 */5 * * * * cd ~/blog && ./pull-publish
 ```
 
-## changing from crons to webhooks
+## Changing from Crons to Webhooks
 After the initial setup with cron, I decided to implement [webhooks]({{< ref "github-blog-publish-webhooks" >}}).
+It is very easy to implement webhooks in github, but hard to update a server's webroot within a script with proper permissions.
+I encountered some difficulty getting authentication working with github webhooks, but I was able to find a workaround.
 
 # How to do Links in Hugo
 I like Hugo so far. It seems relatively easy to add images and content.
@@ -59,3 +61,7 @@ It uses a template-language-like syntax to update links to point to the proper p
 ```markdown
 testing links within hugo [link text]({{< ref "third" >}})
 ```
+
+I am wondering if it would be reasonable to construct a zettelkasten out of a blog like this using workflow helper scripts like [zkvr is for github and markdown](https://github.com/nicholas-long/zkvr).
+There are already comparable solutions out there for publishing from zettelkasten like Obsidian Publish.
+I think I'm still kind of obsessed with zettelkasten.
