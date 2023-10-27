@@ -35,6 +35,20 @@ nc localhost 8081
   @reboot cd ~/blog && ./webhook-local-worker
   ```
 
+- adding security
+```bash
+$ cat blog-webhook.cgi
+#!/bin/bash
+
+echo ""
+echo "updating blog..."
+if grep "SECRET-CODE-GOES-HERE" /dev/stdin; then
+  nc localhost 8081
+else
+  echo "You didn't say the magic word!"
+fi
+```
+
 # enabling webhooks on github
 - go to project settings on github - the upper right tab
 - create a new webhook
