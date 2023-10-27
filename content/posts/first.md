@@ -57,10 +57,7 @@ I like Hugo so far. It seems relatively easy to add images and content.
 One thing that seems to be an issue is links. Hugo has a reference system for dealing with this problem.
 It uses a template-language-like syntax to update links to point to the proper paths.
 
-- links within hugo
-```markdown
-testing links within hugo [link text]({{< ref "third" >}})
-```
+- links within hugo https://gohugo.io/content-management/cross-references/
 
 I am wondering if it would be reasonable to construct a zettelkasten out of a blog like this using workflow helper scripts like [zkvr is for github and markdown](https://github.com/nicholas-long/zkvr).
 There are already comparable solutions out there for publishing from zettelkasten like Obsidian Publish.
