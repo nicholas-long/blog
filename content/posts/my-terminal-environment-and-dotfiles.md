@@ -2,6 +2,7 @@
 title = 'My Terminal Environment and Dotfiles'
 date = 2023-10-26T15:03:29-05:00
 draft = false
+categories = linux terminal environment dotfiles scripts zettelkasten
 +++
 
 # what is my environment repository?
@@ -38,6 +39,7 @@ I developed it using bash and awk scripts and other open source TUI (Text User I
 I watched [rwxrob](https://github.com/rwxrob)'s youtube for inspiration for the structure of the project.
 I took the ideas and ran with them, creating an fzf menu-driven workflow script for maintaining a graph database of markdown files.
 I even created a simple [graph query language](https://github.com/nicholas-long/zkvr/blob/main/zet/20221013221136/README.md) for it that can be used to find a path of document nodes connected to other nodes, filtering by tags.
+- link to [blog post about zkvr]({{< ref "zettelkasten-github-tui-zkvr-project" >}})
 
 This ended up being the perfect combination for storing my dotfiles and scripts.
 Some of the scripts are even related to other content or scripts within the repostiory.
