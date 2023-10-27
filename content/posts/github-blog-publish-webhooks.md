@@ -36,3 +36,22 @@ Hugo does not seem to build when run under the setuid script under www-data.
 ```bash
 git config --global --add safe.directory /opt/blog
 ```
+
+- trying out a simple local service
+```bash
+ubuntu@ip-172-31-28-211:~/blog$ cat webhook-local-worker
+#!/bin/bash
+
+socat TCP4-LISTEN:8081,fork,bind=127.0.0.1 exec:./pull-publish
+
+ubuntu@ip-172-31-28-211:/usr/lib/cgi-bin$ cat blog-webhook.cgi
+#!/bin/bash
+
+echo ""
+echo "updating blog..."
+nc localhost 8081
+```
+  - installing new crontab for local service
+  ```
+  @reboot cd ~/blog && ./webhook-local-worker
+  ```
