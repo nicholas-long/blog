@@ -33,3 +33,8 @@ nc localhost 8081
   ```crontab
   @reboot cd ~/blog && ./webhook-local-worker
   ```
+
+# enabling webhooks on github
+- go to project settings on github - the gear in the upper right
+- create a new webhook
+- add a payload and check for it for security when CGI script gets called.

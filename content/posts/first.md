@@ -46,3 +46,6 @@ One minute was fine for testing, but I think that is too frequent for actual use
 ```crontab
 */5 * * * * cd ~/blog && ./pull-publish
 ```
+
+## changing from crons to webhooks
+After the initial setup with cron, I decided to implement [webhooks]({{< ref "github-blog-publish-webhooks" >}}).
