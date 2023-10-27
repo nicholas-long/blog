@@ -36,6 +36,7 @@ nc localhost 8081
   ```
 
 # enabling webhooks on github
-- go to project settings on github - the gear in the upper right
+- go to project settings on github - the upper right tab
 - create a new webhook
 - add a payload and check for it for security when CGI script gets called.
+![github webhook interface screenshot](/github-webhooks-screenshot.png)
