@@ -35,19 +35,29 @@ nc localhost 8081
   @reboot cd ~/blog && ./webhook-local-worker
   ```
 
-- adding security
+## adding security
+At first I tried using the HMAC digest sent from github.
+In order to properly validate the message, I have to checksum the payload and signature with HMAC SHA-256.
+That is difficult. I would need to write a python script in order to hash the input file with HMAC.
+I think that having such a difficult verification method for webhooks can be a negative.
+Like many developers do, it is tempting to just skip all security and authentication concerns while the project is in development until "later when things are working".
+
+The more expedient method which still provides protection from random people calling the endpoint is to add a secret HTTP GET query parameter.
+Webhooks are not visible publicly on github, and the endpoint is HTTPs and protected by a valid SSL certificate. Eavesdropping and intercepting the secret should not be a concern.
+All HTTP GET parameters go into an environment variable `QUERY_STRING` in the CGI standard.
 ```bash
 $ cat blog-webhook.cgi
 #!/bin/bash
 
 echo ""
 echo "updating blog..."
-if cat | grep "SECRET-GOES-HERE"; then
+if echo "$QUERY_STRING" | grep "PUT_YOUR_HTTP_GET_SECRET_HERE"; then
   nc localhost 8081
 else
   echo "You didn't say the magic word!"
 fi
 ```
+- how to validate webhooks on github https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#examples
 
 # enabling webhooks on github
 - go to project settings on github - the upper right tab
