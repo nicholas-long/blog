@@ -32,4 +32,7 @@ int main() {
 The setuid script does not have access to run `cd` to get into the directory. I am not sure why.
 Hugo does not seem to build when run under the setuid script under www-data.
 
-- [ ] do i need to fix the path?
+- trying adding git config setting
+```bash
+git config --global --add safe.directory /opt/blog
+```
