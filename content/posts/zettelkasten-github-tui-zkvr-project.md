@@ -36,16 +36,25 @@ It is very useful for scripting things that require user interaction.
 - the preview menu can turn scripts into TUI command processors
 
 # assorted findings about implementing zettelkasten
+
+- [zkvr](https://github.com/nicholas-long/zkvr) is a low-overhead graph database written in Bash and Awk.
+- Copying a subset of zet directories mirrors copying a vertex-induced subgraph.
+- Git tracks file changes, useful for monitoring changes from enrichment processes.
+- Zettelkasten allows creating new spaces for new ideas.
+- Issue tracking is possible through links within cards.
+- Links add context to content, some should be one-way.
+- Lines of text move organically across links during project development.
+- Creating a zettelkasten from existing markdown documents needs more links.
+- Sequential numbering based on timestamps provides order.
+- Structure allows quick navigation between notes with a couple links.
+- Tags and concept hubs are similar but serve different purposes.
+- [Graph query language](https://github.com/nicholas-long/zkvr/blob/main/zet/20221013221136/README.md) included.
+
 These are my thoughts that have been collected over the course of working on and using the project.
 
 - [zkvr](https://github.com/nicholas-long/zkvr) is a functioning graph database written in like 350 lines of bash and awk
   - it would work as a graph database in a really low overhead docker type of environment or embedded system.
   - it is easier to script something for a lot of nodes than to play with a graph UI visualizer
-- copying subset of some zet directories to another zettelkasten is the equivalent of copying a vertex induced subgraph
-  - links will match up with enrich process
-- git already tracks file changes - take advantage of this in scripts or in workflow to see what changed
-  - can see if enrichment process to add backlinks has changed any files and needs to run again
-    - repeated `git add .` and `git status --porcelain` commands
 - need to have places to write down ideas and be able to create new places when new kinds of ideas arise
 - issue tracking - it is possible to keep track of issues using the links within cards relative to other cards.
   - a list - cards attached to a specific card can be considered "in a list". for example, a list of cards that need something fixed
