@@ -33,8 +33,8 @@ finally, i created a wrapper tool to call the CLI tool with the appropriate comm
 - [CLI tool notes and wrapper script](https://github.com/nicholas-long/environment/blob/main/zet/20231103204105/README.md)
 
 # making a friend assistant
-i tested out this idea in order to [create a chatbot assistant friend](https://github.com/nicholas-long/environment/blob/main/zet/20231102221207/README.md#testing-running-it-as-a-chatbot-friend-for-my-kid for my kid).
-i obviously don't trust this enough to let kids play with it without supervision yet, so i tried interacting with the chatbot as if i were my oldest child with the kid of questions he might ask.
+i tested out this idea in order to [create a chatbot assistant friend](https://github.com/nicholas-long/environment/blob/main/zet/20231102221207/README.md) for my kids.
+i obviously don't trust this enough to let kids play with it without supervision yet, so i tried interacting with the chatbot with the kind of questions it might get asked, like the kind of stuff my kids repeatedly ask.
 i learned from doing this that you need to explain what is going on in the chat history so that it doesn't answer questions twice or get confused about who said what.
 i asked it what it should be named, and it chose the name "Friend bot".
 
