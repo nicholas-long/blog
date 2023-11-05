@@ -5,16 +5,16 @@ draft = false
 +++
 
 # creating your own assistant with your own data
-you can create an assistant with your own data. here is how: https://youtu.be/9AXP7tCI9PI?si=dOd8TuYSDxM5Ke79
-these scripts make use of python langchain library to load content in a directory.
+- you can create an assistant with your own data. here is how: https://youtu.be/9AXP7tCI9PI?si=dOd8TuYSDxM5Ke79
 - link to example python project from video https://github.com/techleadhd/chatgpt-retrieval
 
 ## crafting prompts
-Rewrite this into a paragraph:
 you can make pretty complicated assistants just by crafting GPT prompts.
-it is possible to create a stateful assistant with memory just by feeding the history back in with the prompt, kind of like how it works with a recurrent neural network, except with just text content.
+the example assistant scripts make use of python langchain library to load your own data to create an assistant and encode it somehow into the prompt.
+
+an even simpler example of this is to create a stateful assistant with memory just by feeding the history back in with the prompt, kind of like how it works with a recurrent neural network, except with just text content.
 include a conversation log of everything that was talked about previously with each prompt in a markdown snippet, and explain to ChatGPT that the chat history is included for context.
-the conversation history could even be periodically summarized through chatgpt in order to keep the prompt smaller, sort of like encoding long term memories by editing the text.
+the conversation history could also even be periodically summarized through ChatGPT in order to keep the prompt smaller, sort of like encoding long term memories by editing the text.
 
 ## picking a CLI tool
 first I tried [openai-cli](https://github.com/peterdemin/openai-cli).
