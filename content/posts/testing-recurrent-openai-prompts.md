@@ -35,6 +35,8 @@ finally, i created a wrapper tool to call the CLI tool with the appropriate comm
 # making a friend assistant
 i tested out this idea in order to [create a chatbot assistant friend](https://github.com/nicholas-long/environment/blob/main/zet/20231102221207/README.md#testing-running-it-as-a-chatbot-friend-for-my-kid for my kid).
 i obviously don't trust this enough to let kids play with it without supervision yet, so i tried interacting with the chatbot as if i were my oldest child with the kid of questions he might ask.
+i learned from doing this that you need to explain what is going on in the chat history so that it doesn't answer questions twice or get confused about who said what.
+i asked it what it should be named, and it chose the name "Friend bot".
 
 ## structure of recurrent prompt assistant
 - header passed into every prompt is stored in file called `prime-directive`
