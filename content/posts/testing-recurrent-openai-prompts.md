@@ -2,6 +2,7 @@
 title = 'Testing Recurrent Openai Chatgpt Prompts'
 date = 2023-11-05T01:05:45-05:00
 draft = false
+tags = ['ai']
 +++
 
 # creating your own assistant with your own data
