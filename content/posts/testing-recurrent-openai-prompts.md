@@ -6,7 +6,12 @@ tags = ['ai']
 +++
 
 # creating your own assistant with your own data
-- you can create an assistant with your own data. here is how: https://youtu.be/9AXP7tCI9PI?si=dOd8TuYSDxM5Ke79
+The quickest option to get started playing with creating you own assistants with a GUI tool is to use flowise
+- https://flowiseai.com/
+- https://github.com/FlowiseAI/Flowise
+
+## coding example from youtube
+- creating an assistant with your own data using python: https://youtu.be/9AXP7tCI9PI?si=dOd8TuYSDxM5Ke79
 - link to example python project from video https://github.com/techleadhd/chatgpt-retrieval
 
 ## crafting prompts
@@ -33,7 +38,7 @@ pip3 install gpt-command-line
 finally, i created a wrapper tool to call the CLI tool with the appropriate command line arguments and model so that i can run ChatGPT on hightlighted text within [vim](https://github.com/nicholas-long/environment/tree/main/zet/20230905015059).
 - [CLI tool notes and wrapper script](https://github.com/nicholas-long/environment/blob/main/zet/20231103204105/README.md)
 
-# making a friend assistant
+# making a friend assistant with lightweight scripts
 i tested out this idea in order to [create a chatbot assistant friend](https://github.com/nicholas-long/environment/blob/main/zet/20231102221207/README.md) for my kids.
 i obviously don't trust this enough to let kids play with it without supervision yet, so i tried interacting with the chatbot with the kind of questions it might get asked, like the kind of stuff my kids repeatedly ask.
 i learned from doing this that you need to explain what is going on in the chat history so that it doesn't answer questions twice or get confused about who said what.
