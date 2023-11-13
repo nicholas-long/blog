@@ -9,16 +9,41 @@ My [environment]({{< ref "my-terminal-environment-and-dotfiles.md" >}}) and dotf
 These scripts will run other dependent scripts designed as version selectors for programs where there is no common apt or brew installation package candidate.
 
 There are two such programs:
-- [lazygit version selector and interactive install script](https://github.com/nicholas-long/environment/blob/main/zet/20230922051930/README.md)
 - [bat version selector script](https://github.com/nicholas-long/environment/blob/main/zet/20230907151050/README.md)
+- [lazygit version selector and interactive install script](https://github.com/nicholas-long/environment/blob/main/zet/20230922051930/README.md)
 
 `bat` is a command to preview and pretty print code or markdown with syntax highlighting.
 It has an installation package in apt on some debian systems, but [the apt package for bat does not actually seem to work](https://github.com/nicholas-long/environment/blob/main/zet/20230905021249/README.md).
 I have started downloading the release package directly from github.
 
+`lazygit` is a Text User Interface for optimizing git workflow.
+It makes it very easy to commit files quickly or pick and choose specific files to stage.
+It is similar in functionality to the git workflow panel within Visual Studio Code.
+
 ## script to get release links from github
 In order to create the version selectors and download releases from github, I first needed to create a [script to get all the github release links for the latest release](https://github.com/nicholas-long/environment/blob/main/zet/20230905030303/README.md) of a repository.
 I can do this with two API calls from curl within bash scripts.
+The data that is returned from the script is formatted as two columns, filenames and URL.
+```bash
+$ github-latest-files https://github.com/jesseduffield/lazygit
+checksums.txt   https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/checksums.txt
+lazygit_0.40.2_Darwin_arm64.tar.gz      https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Darwin_arm64.tar.gz
+lazygit_0.40.2_Darwin_x86_64.tar.gz     https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Darwin_x86_64.tar.gz
+lazygit_0.40.2_freebsd_32-bit.tar.gz    https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_freebsd_32-bit.tar.gz
+lazygit_0.40.2_freebsd_arm64.tar.gz     https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_freebsd_arm64.tar.gz
+lazygit_0.40.2_freebsd_armv6.tar.gz     https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_freebsd_armv6.tar.gz
+lazygit_0.40.2_freebsd_x86_64.tar.gz    https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_freebsd_x86_64.tar.gz
+lazygit_0.40.2_Linux_32-bit.tar.gz      https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_32-bit.tar.gz
+lazygit_0.40.2_Linux_arm64.tar.gz       https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_arm64.tar.gz
+lazygit_0.40.2_Linux_armv6.tar.gz       https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_armv6.tar.gz
+lazygit_0.40.2_Linux_x86_64.tar.gz      https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz
+lazygit_0.40.2_Windows_32-bit.zip       https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Windows_32-bit.zip
+lazygit_0.40.2_Windows_arm64.zip        https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Windows_arm64.zip
+lazygit_0.40.2_Windows_armv6.zip        https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Windows_armv6.zip
+lazygit_0.40.2_Windows_x86_64.zip       https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Windows_x86_64.zip
+```
+
+It is then necessary to write a quick Bash and AWK script combo to select the appropriate version of each program based on your architecture.
 
 ## selecting version based on architecture
 This is a excerpt from a script to select the release link for the architecture.
