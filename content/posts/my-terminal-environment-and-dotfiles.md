@@ -9,6 +9,7 @@ categories = ['linux', 'terminal', 'environment', 'dotfiles', 'scripts', 'zettel
 
 - link to environment: https://github.com/nicholas-long/environment
   - permalink to [post about this blog](https://github.com/nicholas-long/environment/tree/main/zet/20231025215645)
+- [platform specific install scripts]({{< ref "platform-specific-version-selector-install-scripts.md" >}})
 
 I made a zettelkasten for dotfiles and scripts.
 Maintaining and working within it feels like being plugged directly into an enormous and ever-changing project.
