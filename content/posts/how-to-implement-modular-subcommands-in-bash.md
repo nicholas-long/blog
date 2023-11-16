@@ -56,6 +56,6 @@ fi
 ```
 
 ## example implementations of commands with subcommands
-- [zkvr and its CLI command]({{< ref 'zettelkasten-github-tui-zkvr-project.md' >}})
-- [fsdb partitioned filesystem database]({{< ref 'partitioned-event-database-on-filesystem.md' >}})
+- [zkvr and its CLI command]({{< ref "zettelkasten-github-tui-zkvr-project.md" >}})
+- [fsdb partitioned filesystem database]({{< ref "partitioned-event-database-on-filesystem.md" >}})
 
