@@ -59,3 +59,6 @@ fi
 - [zkvr and its CLI command]({{< ref "zettelkasten-github-tui-zkvr-project.md" >}})
 - [fsdb partitioned filesystem database]({{< ref "partitioned-event-database-on-filesystem.md" >}})
 
+# References
+- https://github.com/nicholas-long/environment/blob/main/zet/20231116151546/README.md
+
