@@ -13,7 +13,7 @@ There are two such programs:
 - [lazygit version selector and interactive install script](https://github.com/nicholas-long/environment/blob/main/zet/20230922051930/README.md)
 
 `bat` is a command to preview and pretty print code or markdown with syntax highlighting.
-It has an installation package in apt on some debian systems, but [the apt package for bat does not actually seem to work](https://github.com/nicholas-long/environment/blob/main/zet/20230905021249/README.md).
+It has an installation package in apt on some debian systems, but the apt package for bat does not actually seem to work.
 I have started downloading the release package directly from github.
 
 `lazygit` is a Text User Interface for optimizing git workflow.
