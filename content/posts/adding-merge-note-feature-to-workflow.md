@@ -26,3 +26,13 @@ merge
 ```
 
 This new workflow has transformed my note-taking process and made managing my work far more enjoyable and efficient. The ability to merge notes organically has been a game-changer.
+
+## The Algorithm
+- select a link from the current card into which to merge the current card
+- write to a temp file
+- call [awk script](https://github.com/nicholas-long/environment/blob/main/zet/20231121064457/merge-markdown-related-links) to merge the destination readme and the source readme into temp file
+- remove self references from resulting file
+- copy temp file to destination README
+- set current document to point to destination README
+- delete current card directory
+- run enrich step within zkvr to update all backlinks
