@@ -101,12 +101,14 @@ It might be a good idea to add some additional configuration steps to zkvr to se
 ```bash
     temptags=$(mktemp)
     echo "Generating tags..."
+    # generate tags using GPT and store in temp file
     zet/20231114070621/generate-tags "$doc" > "$temptags"
     echo "Tags:"
     cat "$temptags"
-    # add tags
+    # add tags from GPT output
     cat "$temptags" | xargs -IR -n 1 ./zc addtag -t R "$id"
-    # fix duplicate tags
+    # remove duplicate tags, reuse tempfile
     zet/20231121064457/fix-duplicate-tags "zet/$id/README.md" > $temptags
+    # overwrite original document
     mv $temptags "zet/$id/README.md"
 ```
