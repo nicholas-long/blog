@@ -1,5 +1,5 @@
 +++
-title = 'Automatically Tagging Zettelkasten Documents With Chatgpt'
+title = 'Using ChatGPT to Automatically Tag Documents in a Zettelkasten'
 date = 2023-11-24T00:14:09-06:00
 draft = true
 +++
@@ -7,7 +7,7 @@ draft = true
 # Project to Automatically Select Tags for Zettelkasten Documents
 
 ## Motivation for Project
-- it is easy to forget to tag documents
+- when working in a zettelkasten, it is easy to forget to tag documents. sometimes i create a card quickly and do not spend the time to properly tag it.
 - it is easy to forget about specific tags that would be relevant at the time
 - sometimes it is a good idea to come up with new tags?
 
@@ -41,6 +41,8 @@ cat "$1"
 ```
 
 ## generate tags for document passed as argument
+
+I used the gpt CLI command tool that I [selected for use in the terminal]({{< ref "testing-recurrent-openai-prompts.md" >}})
 
 ```bash
 #!/bin/bash
