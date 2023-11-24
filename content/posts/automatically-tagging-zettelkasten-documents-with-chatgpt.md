@@ -7,16 +7,22 @@ draft = true
 # Project to Automatically Select Tags for Zettelkasten Documents
 
 ## Motivation for the Project
+
 When working within a zettelkasten, it's not uncommon to neglect the task of tagging documents. This can be attributed to the speed of creating a new card, leaving little time to tag it properly. Additionally, it's easy to overlook certain tags that may be relevant at that moment. There's also the consideration of whether it would be beneficial to create new tags.
 
 However, there are potential downsides to this approach. For instance, in some people's implementations, certain tags might be reserved, creating a potential for confusion. Additionally, the AI might misinterpret the context, leading to inaccuracies.
 
+I also wanted to implement this as a feature within the [zkvr project]({{< ref "zettelkasten-github-tui-zkvr-project.md" >}}).
+I have a couple ideas for AI powered scripts that could run within an interconnected graph of Zettelkasten documents.
+
 ## Results
-Moving onto the results, the system can occasionally surprise you with its creativity by adding tags that don't yet exist. The time it takes to run for each document is relatively short, only a second. However, it's not always accurate, at times adding tags that are only loosely related to the content. Despite these minor drawbacks, it maintains a good level of accuracy overall.
+Moving onto the results, the system can occasionally surprise you with its creativity by adding tags that don't yet exist.
+The time it takes to run for each document is relatively short, only a second.
+However, it's not always accurate, at times adding tags that are only loosely related to the content.
+Sometimes it returns duplicate tags, or returns some of the same tags that already exist.
+Despite these minor drawbacks, it maintains a relatively good level of accuracy overall.
 
 # Code
-
-Sometimes this code returns duplicate tags, or returns some of the same tags that already exist.
 
 ## Generating the Prompt for ChatGPT
 First, I created a simple script for generating the prompt for ChatGPT.
@@ -56,16 +62,26 @@ $SCRIPT_DIR/generate-prompt "$1" | gpt --model gpt-3.5-turbo --prompt - | grep -
 
 ## Implementing it in ZKVR
 
-I wanted to implement this as a feature within the [zkvr project]({{< ref "zettelkasten-github-tui-zkvr-project.md" >}}).
-I have a couple ideas for AI powered scripts that could run within an interconnected graph of Zettelkasten documents.
-It might be a good idea to add some additional configuration steps to zkvr to setup a ChatGPT API key so the cool features work if someone else uses zkvr.
-
 I added a new command to the program called `autotag`. It will automatically add tags to the current document.
 I was able to reuse a script that I created for removing duplicate tags during the process of [implementing the merging functionality]({{< ref "adding-merge-note-feature-to-workflow.md" >}})
+
+It might be a good idea to add some additional configuration steps to zkvr to setup a ChatGPT API key so the cool features work if someone else uses zkvr.
 
 - example of programmatically adding tags to a card by ID from scripts using zkvr's CLI tools
 ```bash
 ./zc addtag -t test 20231114070621
 ```
 
-- [ ] finish this
+- adding it to [zkvr user interface code](https://github.com/nicholas-long/environment/blob/main/zet/20221013021614/README.md) 
+```bash
+    temptags=$(mktemp)
+    echo "Generating tags..."
+    zet/20231114070621/generate-tags "$doc" > "$temptags"
+    echo "Tags:"
+    cat "$temptags"
+    # add tags
+    cat "$temptags" | xargs -IR -n 1 ./zc addtag -t R "$id"
+    # fix duplicate tags
+    zet/20231121064457/fix-duplicate-tags "zet/$id/README.md" > $temptags
+    mv $temptags "zet/$id/README.md"
+```
