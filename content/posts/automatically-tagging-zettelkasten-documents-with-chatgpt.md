@@ -1,7 +1,7 @@
 +++
 title = 'Using ChatGPT to Automatically Tag Documents in a Zettelkasten Document Graph'
 date = 2023-11-24T00:14:09-06:00
-draft = true
+draft = false
 +++
 
 # Project to Automatically Select Tags for Zettelkasten Documents
