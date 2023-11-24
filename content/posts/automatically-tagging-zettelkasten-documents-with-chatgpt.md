@@ -18,7 +18,6 @@ draft = true
 # code
 
 Sometimes this code returns duplicate tags, or returns some of the same tags that already exist.
-I was able to reuse a script that I created for removing duplicate tags during the process of [implementing the merging functionality]({{< ref "adding-merge-note-feature-to-workflow.md" >}})
 
 ## generating the prompt for chatgpt
 First, I created a simple script for generating the prompt for ChatGPT.
@@ -53,6 +52,22 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # use a grep pattern to pull out tags to keep output format consistent
 $SCRIPT_DIR/generate-prompt "$1" | gpt --model gpt-3.5-turbo --prompt - | grep -Eo '#[A-Za-z]+' | sed 's/^#//g'
 ```
+
+## implementing it in zkvr
+
+I wanted to implement this as a feature within the [zkvr project]({{< ref "zettelkasten-github-tui-zkvr-project.md" >}}).
+I have a couple ideas for AI powered scripts that could run within an interconnected graph of Zettelkasten documents.
+It might be a good idea to add some additional configuration steps to zkvr to setup a ChatGPT API key so the cool features work if someone else uses zkvr.
+
+I added a new command to the program called `autotag`. It will automatically add tags to the current document.
+I was able to reuse a script that I created for removing duplicate tags during the process of [implementing the merging functionality]({{< ref "adding-merge-note-feature-to-workflow.md" >}})
+
+- example of programmatically adding tags to a card by ID from scripts using zkvr's CLI tools
+```bash
+./zc addtag -t test 20231114070621
+```
+
+- [ ] finish this
 
 # results
 - sometimes it gets creative and adds extra tags that do not exist yet
