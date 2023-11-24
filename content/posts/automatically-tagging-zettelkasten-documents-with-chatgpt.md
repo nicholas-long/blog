@@ -60,6 +60,30 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # use a grep pattern to pull out tags to keep output format consistent
 $SCRIPT_DIR/generate-prompt "$1" | gpt --model gpt-3.5-turbo --prompt - | grep -Eo '#[A-Za-z]+' | sed 's/^#//g'
 ```
+That last line might look scary, so let's dive into it a bit.
+
+### Scraping the Resulting Tags from the Output
+GPT might return the tags in any format. Sometimes, there is one tag per line, and sometimes, it puts all the tags together. Sometimes there's a preamble that says "here are the appropriate tags" or something similar, and sometimes there is not.
+Therefore, it is necessary to scrape the resulting tags out.
+
+- scraping out tags
+```bash
+... | grep -Eo '#[A-Za-z]+' | sed 's/^#//g'
+```
+
+The one consistent part of the GPT output is that it always has hashtags.
+The first part of this line returns all tags in the document, one per line. The second removes the leading hashtag from each line.
+
+- example GPT output before scraping
+```markdown
+Based on the content of the markdown document, the appropriate tags would be:
+
+- `#script`
+- `#chatGPT`
+- `#automation`
+- `#markdown`
+- `#tags`
+```
 
 ## Implementing it in ZKVR
 
