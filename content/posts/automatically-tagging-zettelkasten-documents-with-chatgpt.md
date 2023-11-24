@@ -9,6 +9,7 @@ draft = true
 ## Motivation for the Project
 
 When working within a zettelkasten, it's not uncommon to neglect the task of tagging documents. This can be attributed to the speed of creating a new card, leaving little time to tag it properly. Additionally, it's easy to overlook certain tags that may be relevant at that moment. There's also the consideration of whether it would be beneficial to create new tags.
+So what if I implement a feature to automatically tag documents within a zettelkasten using ChatGPT?
 
 However, there are potential downsides to this approach. For instance, in some people's implementations, certain tags might be reserved, creating a potential for confusion. Additionally, the AI might misinterpret the context, leading to inaccuracies.
 
