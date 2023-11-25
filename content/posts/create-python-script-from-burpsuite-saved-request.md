@@ -4,6 +4,11 @@ date = 2023-11-25T15:47:03-06:00
 draft = true
 +++
 
+# motivation for the project
+often when working with web penetration testing, it becomes necessary to write a quick and dirty python script to perform a web request.
+burpsuite has a feature to copy a request as a valid curl command that you can run to recreate an identical HTTP request.
+what if there was also a way to automatically generate a boilerplate python requests script that sets all appropriate headers, cookies, and post content?
+
 # decoding burpsuite saved request format format
 
 data is stored in burpsuite request in XML format.
