@@ -10,6 +10,8 @@ Burpsuite has a feature to copy a request as a valid curl command that you can r
 This command is a valid bash command that could then be used to create a bash script to perform the same request.
 What if there was also a way to automatically generate a boilerplate python requests script that sets all appropriate headers, cookies, and post content?
 
+- The [full script is located here](https://github.com/nicholas-long/environment/blob/main/zet/20230928133216/README.md)
+
 # Code
 ## Decoding BurpSuite Saved Request Format
 
