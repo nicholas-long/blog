@@ -5,15 +5,16 @@ draft = true
 +++
 
 # motivation for the project
-often when working with web penetration testing, it becomes necessary to write a quick and dirty python script to perform a web request.
-burpsuite has a feature to copy a request as a valid curl command that you can run to recreate an identical HTTP request.
-what if there was also a way to automatically generate a boilerplate python requests script that sets all appropriate headers, cookies, and post content?
+Often when working with web penetration testing, it becomes necessary to write a quick and dirty python script to perform a web request.
+Burpsuite has a feature to copy a request as a valid curl command that you can run to recreate an identical HTTP request.
+What if there was also a way to automatically generate a boilerplate python requests script that sets all appropriate headers, cookies, and post content?
 
+# code
 # decoding burpsuite saved request format format
 
-data is stored in burpsuite request in XML format.
-the full HTTP request data is base64 encoded within the `reqeust` tag.
-can use xpup go library/CLI tool to parse the XML.
+Data is stored in burpsuite request in XML format.
+The full HTTP request data is base64 encoded within the `reqeust` tag.
+We can use the `xpup` go library/CLI tool to parse the XML.
 
 - get raw HTTP request data from burp saved request - code from `get-burp-http-saved-request.sh`
 ```bash
@@ -21,9 +22,9 @@ cat $1 | go run github.com/ericchiang/xpup@latest //request | base64 -d
 ```
 
 # getting HTTP content
-the HTTP request has headers and optional content, if it is a POST request.
-the headers all occur before the first blank line.
-in order to retrieve the content, we can use a simple AWK script `get-http-post-content.awk`
+The HTTP request has headers and optional content, if it is a POST request.
+The headers all occur before the first blank line.
+In order to retrieve the content, we can use a simple AWK script `get-http-post-content.awk`
 ```awk
 BEGIN { content=0 }
 content { print }
@@ -31,9 +32,9 @@ content { print }
 ```
 
 # decoding URL encoded post params
-a simple python script can decode the HTML post parameters.
+A simple python script can decode the HTML post parameters.
 HTTP post parameters are separated by ampersand and equal characters.
-the `unquote` function from `urllib` can help unescaping strings.
+The `unquote` function from `urllib` can help unescaping strings.
 `repr` returns a printable version of the string.
 
 ```python
