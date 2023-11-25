@@ -1,5 +1,5 @@
 +++
-title = 'Script to make a Python Requests Script from a Burpsuite Saved Request'
+title = 'Script to Generate a Python Requests Script from a Burpsuite Saved Request'
 date = 2023-11-25T15:47:03-06:00
 draft = false
 +++
