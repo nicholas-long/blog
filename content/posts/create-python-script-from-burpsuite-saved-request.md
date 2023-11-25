@@ -4,13 +4,13 @@ date = 2023-11-25T15:47:03-06:00
 draft = true
 +++
 
-# motivation for the project
+# Motivation for the Project
 Often when working with web penetration testing, it becomes necessary to write a quick and dirty python script to perform a web request.
 Burpsuite has a feature to copy a request as a valid curl command that you can run to recreate an identical HTTP request.
 What if there was also a way to automatically generate a boilerplate python requests script that sets all appropriate headers, cookies, and post content?
 
-# code
-# decoding burpsuite saved request format format
+# Code
+# Decoding BurpSuite Saved Request Format
 
 Data is stored in burpsuite request in XML format.
 The full HTTP request data is base64 encoded within the `reqeust` tag.
@@ -21,7 +21,7 @@ We can use the `xpup` go library/CLI tool to parse the XML.
 cat $1 | go run github.com/ericchiang/xpup@latest //request | base64 -d
 ```
 
-# getting HTTP content
+# Getting HTTP Content
 The HTTP request has headers and optional content, if it is a POST request.
 The headers all occur before the first blank line.
 In order to retrieve the content, we can use a simple AWK script `get-http-post-content.awk`
@@ -31,7 +31,7 @@ content { print }
 /^$/ { content=1 }
 ```
 
-# decoding URL encoded post params
+# Decoding URL Encoded POST Params
 A simple python script can decode the HTML post parameters.
 HTTP post parameters are separated by ampersand and equal characters.
 The `unquote` function from `urllib` can help unescaping strings.
@@ -49,7 +49,7 @@ for p in s.split('&'):
 print(repr(params))
 ```
 
-# decoding cookies
+# Decoding Cookies
 similar to the process of decoding URL post parameters, for decoding cookies, a python script can split the cookie header from the client
 ```python
 from urllib.parse import unquote
@@ -64,7 +64,7 @@ for rawline in fileinput.input():
 print(repr(params))
 ```
 
-# script to generate python code
+# Script to Generate Python Code
 this calls other dependent scripts.
 
 ```bash
