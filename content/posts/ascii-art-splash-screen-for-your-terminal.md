@@ -8,21 +8,6 @@ I like having a [splash screen with ASCII art](https://github.com/nicholas-long/
 A lot of people like using neofetch, but I like putting my own art there.
 Either way, it is very simple to configure.
 
-- My ascii art
-```
-&&&&&&&&&&&&
-&          &
-&          &
-&          &
-&          &
-&coyote0x90&
-&&&&&&&&&&&&
-&@&&&&=====&
-&&&&&&&&&&&&
- &&&&&&&&&& 
- &&&&&&&&&& 
-```
-
 Bash and Zsh both load RC files from your home directory when they launch, `.bashrc` and `.zshrc` respectively.
 These are just scripts that get loaded full of setup commands to run before running your commands in the interactive terminal.
 These files are responsible for user terminal customizations and for configuring the `PATH` environment variable to point to any extra user scripts.
@@ -72,5 +57,20 @@ These bash commands will enable neofetch as an ascii art splash screen on a Debi
 ```bash
 echo neofetch >> ~/.bashrc
 echo neofetch >> ~/.zshrc
+```
+
+- My ascii art
+```
+&&&&&&&&&&&&
+&          &
+&          &
+&          &
+&          &
+&coyote0x90&
+&&&&&&&&&&&&
+&@&&&&=====&
+&&&&&&&&&&&&
+ &&&&&&&&&& 
+ &&&&&&&&&& 
 ```
 
