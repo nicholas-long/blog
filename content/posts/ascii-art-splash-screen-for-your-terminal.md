@@ -19,7 +19,7 @@ It uses the tty size from stty in order to figure out how big the terminal is an
 As long as my ascii art is rectangular, it will appear centered.
 If it is not rectangular, and there are some lines where it does not line up then it will not display correctly and can appear chopped or glitched.
 
-- how to center text in the terminal with AWK
+- How to center text in the terminal with AWK
 ```awk
 BEGIN {
   command = "stty size | awk '{print $2}'"
@@ -35,7 +35,7 @@ BEGIN {
 This is not strictly necessary in order to implement this, but I thought it is nice to see the ASCII art line up.
 In [my implementation in my environment](https://github.com/nicholas-long/environment/blob/main/zet/20230906032330), I even have a backup ASCII art picture to show if the terminal is too narrow to display the full-sized one properly.
 
-- adjust ascii art if the screen is too narrow
+- Adjust ASCII art if the screen is too narrow
 ```bash
 splashscreen="$ENVIRON_BASEPATH/zet/20230906032330/splash"
 cols=$(stty size | awk '{print $2}')
