@@ -23,3 +23,16 @@ This project is made possible by an interesting combination of programs.
 It was awkward to install ffmpeg on my system.
 I had to do a full upgrade and fix apt dependencies to install it.
 This was simply because I had not updated in a while.
+
+The `youtube-dl` command says it can be installed from pip, but that version might not work.
+During my testing, it did not.
+Installing and running the fresh version from github does work.
+
+- installing `youtube-dl` from github source
+```bash
+git clone https://github.com/ytdl-org/youtube-dl
+cd youtube-dl
+sudo python3 setup.py install
+```
+
+# Running
