@@ -122,7 +122,7 @@ source <(exiftool $srcfile | grep ^Duration | awk -F : '
 Finally, I loop over seconds and minutes (and should loop over hours too).
 For each second, I print a header and run `ffmpeg` to convert it to a 1024x768 image.
 For convenience, I am calling the image `image.png` each time.
-Then, I run tesseract on the file and print the output.
+Then, I run `tesseract` on the file and print the output.
 It is important to clean up the images and output so the programs do not fail to overwrite them on the next frame.
 ```bash
 for m in $(seq 0 $minutes); do
