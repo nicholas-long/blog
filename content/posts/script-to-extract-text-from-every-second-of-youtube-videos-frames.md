@@ -4,6 +4,8 @@ date = 2023-11-26T17:47:07-06:00
 draft = false
 +++
 
+- Link to [script to OCR text content displayed on the screen of youtube videos](https://github.com/nicholas-long/environment/blob/main/zet/20231007033903/README.md)
+
 # Motivation for Project
 It would be neat to be able to search the text content displayed on the screen of any youtube videos.
 In order to do that, you would have to run optical character recognition (OCR) on the frames of the video.
