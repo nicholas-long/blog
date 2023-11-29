@@ -22,7 +22,7 @@ It is also possible to watch the video within the terminal if you can time the c
 As well as an interesting computer science experiment, this project also got me a little experience doing some solutions engineering using several interesting programs.
 This project is made possible by an interesting combination of programs.
 - [youtube-dl](https://github.com/ytdl-org/youtube-dl) - a project to download youtube videos
-- [ffmpeg](https://github.com/ytdl-org/youtube-dl) - record videos, convert videos, and extract frames from videos
+- [ffmpeg](https://ffmpeg.org) - record videos, convert videos, and extract frames from videos
 - [tesseract](https://github.com/tesseract-ocr/tesseract) - OCR images
 
 # Installing
