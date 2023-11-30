@@ -9,6 +9,7 @@ draft = false
 - works by partitioning rows of text into files, essentially turning a directory into a giant hashmap with compressed partitions
 - optional timestamps can be added to rows and searched (resolution: 1 second, epoch time)
 - link to notes about the project: [partitioned filesystem database](https://github.com/nicholas-long/environment/blob/main/zet/20230929145418/README.md)
+- project github: https://github.com/nicholas-long/fsdb
 
 ## justification for the project
 I need something like Kafka that can store things in partitions.
