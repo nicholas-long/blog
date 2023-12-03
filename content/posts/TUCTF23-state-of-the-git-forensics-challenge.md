@@ -1,5 +1,5 @@
 +++
-title = 'TUCTF23 State of the Git Forensics Challenge'
+title = 'Solving the TUCTF23 State of the Git Forensics Challenge'
 date = 2023-12-03T15:05:22-06:00
 draft = false
 +++
