@@ -4,7 +4,7 @@ date = 2023-12-03T15:05:22-06:00
 draft = false
 +++
 
-- CTF link: https://ctfd.tuctf.com/challenges
+- CTF link: https://tuctf.com/
 - challenge files: https://github.com/nicholas-long/environment/blob/main/zet/20231203212512/README.md
 
 # Solving the TUCTF23 State of the Git Challenge
