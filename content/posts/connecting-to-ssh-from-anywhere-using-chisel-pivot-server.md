@@ -1,7 +1,7 @@
 +++
 title = 'Connecting to SSH From Anywhere Using Chisel Pivot Server'
 date = 2023-12-05T12:03:09-06:00
-draft = true
+draft = false
 +++
 
 I recently undertook a project to get conected to my devices from my phone.
@@ -29,5 +29,38 @@ It is possible to forward ports or even set up a socks server on a target machin
 - chisel tool for pivoting https://github.com/jpillora/chisel
 
 Chisel is written in go, so it works on any platform, and it can be installed with one simple command:
-- [ ] insert go command to install chisel here
+```bash
+go install github.com/jpillora/chisel@latest
+```
 
+I needed a [script for the clients to reconnect](https://github.com/nicholas-long/environment/blob/main/zet/20231205173345/README.md) with chisel periodically if they are disconnected.
+This is also an opportunity to include some configuration specific to each computer.
+```bash
+#!/bin/bash
+
+configfile="$HOME/.chiselsetup"
+
+while [ 1 ]; do
+  # need variables creds and port
+  source "$configfile"
+  chisel client --auth "$creds" nicklong.xyz:9000 "R:$port:127.0.0.1:22"
+done
+```
+
+This script loads a config file from the user's home directory to get the credentials and port to forward.
+An example of the configuration file used by this script is included below:
+```bash
+creds="username:SUPER_SECRET_PASSWORD"
+port=9001
+```
+
+# Setting up the server
+```bash
+nohup chisel server --port 9000 --reverse --auth username:SUPER_SECRET_PASSWORD
+```
+This command starts the chisel server on port 9000.
+The username and password are provided as command line arguments or can optionally be provided as a file.
+The `nohup` command ensures that this command continues running after the current terminal session is closed.
+I also put this command in a crontab to run on `@reboot`.
+
+- DevSecOps tip: an authentication file should be used with chisel to avoid leaking passwords on the command line.
