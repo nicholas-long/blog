@@ -6,7 +6,7 @@ draft = false
 
 I recently undertook a project to get conected to my devices from my phone.
 My goal is to be able to SSH from aywhere.
-I'm currently writig this in vim from a terminal on my phone connected to a laptop across the room over the internet without forwarding ports on my router.
+I'm currently writing this in vim from a terminal on my phone connected to a laptop across the room over the internet, without forwarding any ports on my router.
 
 I have a [Samsers Foldable Bluetooth Keyboard](https://www.amazon.com/dp/B07KNHLHDW?ref=ppx_pop_mob_ap_share) that I bought from amazon.
 It allows me to type on the phone like a terminal, but it folds up into roughly the size of a phone itself so I can carry it around.
