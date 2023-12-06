@@ -20,6 +20,7 @@ It does not seem to support the nerd font glypths in tmux by default, but the mi
 Therefore, I can use [my same environment]({{< ref "my-terminal-environment-and-dotfiles.md" >}}) on my phone, with a couple small tweaks.
 
 - WebSSH tool for iPhone: https://apps.apple.com/us/app/webssh-sysadmin-tools/id497714887
+- workarounds to get environment working on WebSSH: https://github.com/nicholas-long/environment/blob/main/zet/20231206002013/README.md
 
 I am using chisel as a server for routing the ports.
 It supports reverse port forwards, and it uses network bandwidth optimally, so it is perfect for this job.
