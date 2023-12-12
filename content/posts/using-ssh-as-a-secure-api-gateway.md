@@ -26,3 +26,4 @@ With an SSH script, the authentication is already taken care of, and nobody can 
 
 # Related
 - [Connecting to SSH from anywhere using a chisel pivot server]({{< ref "connecting-to-ssh-from-anywhere-using-chisel-pivot-server.md" >}})
+- [Working with iOS Siri Shortcuts](https://github.com/nicholas-long/environment/blob/main/zet/20231209171536/README.md)
