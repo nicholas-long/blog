@@ -4,7 +4,7 @@ date = 2023-12-12T09:27:32-06:00
 draft = false
 +++
 
-Recently I discovered that I can create an iOS shortcut step to connect to an SSH server and run a script.
+Recently, I discovered that I can create an iOS shortcut step to connect to an SSH server and run a script.
 This is similar to how the SSH client can run a program when you specify a command as an argument to SSH when connecting.
 
 ![image of SSH step in shortcuts app](/run-shortcut-ssh-step.png)
