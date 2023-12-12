@@ -7,7 +7,7 @@ draft = false
 Recently I discovered that I can create an iOS shortcut step to connect to an SSH server and run a script.
 This is similar to how the SSH client can run a program when you specify a command as an argument to SSH when connecting.
 
-![image of SSH step in shortcuts app]({{< ref "run-shortcut-ssh-step.png" >}})
+![image of SSH step in shortcuts app](/run-shortcut-ssh-step.png)
 
 Doing this, I can create a script that reads standard input as input to the program, which is analogous to the same way as a CGI script can handle POST data.
 I can use JSON data in order to avoid issues with parsing, but if the program is simple enough, then lines of text will even suffice.
