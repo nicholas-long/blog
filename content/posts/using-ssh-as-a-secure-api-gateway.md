@@ -23,3 +23,6 @@ Siri shortcuts are a way to make integrations and small apps on your phone very 
 For example, if I wanted to scan a list of books and store the list on my server, I can make a shortcut step to scan barcodes. Then, I could make a CGI script to just log standard input on a linux server and call it from within a shortcut, passing in the barcode that was read.
 However, doing this will expose a CGI script to the internet. Now it needs additional authentication or maybe a secret token.
 With an SSH script, the authentication is already taken care of, and nobody can access the endpoint without the right private key.
+
+# Related
+- [Connecting to SSH from anywhere using a chisel pivot server]({{< ref "connecting-to-ssh-from-anywhere-using-chisel-pivot-server.md" >}})
