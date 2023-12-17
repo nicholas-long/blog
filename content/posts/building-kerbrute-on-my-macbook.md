@@ -53,3 +53,6 @@ git clone https://github.com/nicholas-long/kerbrute
 cd kerbrute
 make all
 ```
+
+# Related
+- notes about project: https://github.com/nicholas-long/environment/blob/main/zet/20231212133828/README.md
