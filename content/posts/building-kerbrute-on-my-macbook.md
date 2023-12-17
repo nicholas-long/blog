@@ -1,7 +1,7 @@
 +++
 title = 'Building Kerbrute for My Macbook VMs'
 date = 2023-12-17T14:00:28-06:00
-draft = true
+draft = false
 +++
 
 # Kerbrute
@@ -13,10 +13,10 @@ Unfortunately, kerbrute did not have a build available for arm64.
 The only builds were for x86 and x64.
 The last release from project was a few years ago, maybe before the era where ARM macbooks became so good at running VMs.
 Fortunately though, it is a go program, which means it should be portable enough to build on any platform relatively easily.
-I don't need it to run on my macbook natively as a darwin program, but I do need it to run within a linux VM running on arm64.
+I don't need it to run on my macbook natively as a Darwin program, but I do need it to run within a linux VM running on arm64.
 
 # Investigating Makefiles
-I made a makefile once in C class at university, and that was the extent of my experience.
+I made a makefile once in C class at university, and that was the extent of my makefile experience.
 Changing the makefile for kerbrute looked simple enough, though.
 There are only two architectures listed in the definitions:
 ```make
@@ -41,7 +41,7 @@ Adding the architecture to the list at the top of the file causes builds to be c
 ```
 ARCHS=amd64 386 arm64
 ```
-Since I had already cloned the repository, I quickly made a [pull request](https://github.com/ropnop/kerbrute/pull/71) to the project.
+Since I had already forked the repository, I quickly made a [pull request](https://github.com/ropnop/kerbrute/pull/71) to the project.
 However, upon later inspection, it looks like some other people also had the same idea:
 - https://github.com/ropnop/kerbrute/pull/63
 - https://github.com/ropnop/kerbrute/pull/62/files
