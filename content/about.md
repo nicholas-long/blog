@@ -19,3 +19,7 @@ My interests include:
 - AI
 - 3d printing
 
+# My Links
+- my Github: https://github.com/nicholas-long/
+- this blog: https://nicklong.xyz/
+- my resume on github: https://github.com/nicholas-long/resume
