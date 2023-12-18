@@ -1,6 +1,7 @@
 +++
 title = 'About'
 date = 2023-12-18T15:16:12-06:00
+type = "page"
 draft = false
 +++
 
