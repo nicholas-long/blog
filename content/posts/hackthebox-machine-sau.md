@@ -1,5 +1,5 @@
 +++
-title = 'Hackthebox Machine Sau'
+title = 'HackTheBox Machine Sau'
 date = 2024-01-06T10:54:19-06:00
 draft = false
 +++
