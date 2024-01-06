@@ -4,8 +4,9 @@ date = 2024-01-06T10:54:19-06:00
 draft = false
 +++
 
+The box "Sau" was just retired on HackTheBox.
 This was an interesting box because you have to chain together a couple of exploits in order to get a shell, but overall, it is not a very difficult box.
-Sau means pig in german, but the box was created by sau123 so maybe the box name is related to his username.
+Sau means "pig" in German, but the box was created by sau123 so maybe the box name is related to his username.
 
 # Enumeration
 I started off with an nmap full port scan.
