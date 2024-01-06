@@ -169,6 +169,7 @@ User puma may run the following commands on sau:
     (ALL : ALL) NOPASSWD: /usr/bin/systemctl status trail.service
 ```
 With this command we can see the maltrail status. It also seems to be printing interesting lines from auth.log.
+
 The most important thing about this command is that the `pager` command running the output of the `systemctl status` command with sudo can launch commands with `!` just like `less`
 So if I launch `sh`, it is running as root, and I can read the root flag.
 This is a well-known privilege escalation technique: abusing launching programs from within paging programs.
