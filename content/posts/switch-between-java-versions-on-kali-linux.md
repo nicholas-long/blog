@@ -21,8 +21,8 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
 
 # Developing a Version Selector Script
 Since I like automating everything, I decided to come up with a [Java version selector script](https://github.com/nicholas-long/environment/blob/main/zet/20240107171624/README.md) in order to do this on the spot when I need to.
-since the script is setting environment variables, I need to actually source it in the easiest way to do this is to define a bash alias in my `bashrc`.
-My bashrc is available on github in my [environment scripts]({{< ref "my-terminal-environment-and-dotfiles.md" >}})
+Since the script is setting environment variables, I need to actually source it.
+The easiest way to do this is to define a bash alias in my `bashrc`, which is available on github in my [environment scripts]({{< ref "my-terminal-environment-and-dotfiles.md" >}}).
 
 ```bash
 alias java-selector='source $ENVIRON_BASEPATH/zet/20240107171624/java-selector'
