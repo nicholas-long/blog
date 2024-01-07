@@ -5,14 +5,15 @@ draft = false
 +++
 
 Sometimes, when working with Java payloads, it might be necessary to switch to a different Java version or use specific version in order to run a program.
+Recently I needed to switch from OpenJDK version 17 to 11 in order to get a [ysoserial](https://github.com/frohoff/ysoserial) payload to generate.
 One of the suggestions available when researching this was to [use alternatives to switch versions](https://askubuntu.com/questions/740757/switch-between-multiple-java-versions), but this seems like a relatively permanent solution to a temporary problem.
 
-Java versions installed on debian operating systems are stored in `/usr/lib/jvm`.
+Java versions installed on Debian operating systems are stored in `/usr/lib/jvm`.
 In there are nested `bin` directories containing java.
+By setting the `PATH` environment variable and including java's directory first, the correct java command will be used.
 Java also requires a home directory set in the `JAVA_HOME` directory for java JDK reasons.
 
-Recently I needed to switch from OpenJDK version 17 to 11 in order to get a [ysoserial](https://github.com/frohoff/ysoserial) payload to generate.
-- switching to java 11 on Kali
+- switching to Java 11 on Kali
 ```bash
 export PATH=/usr/lib/jvm/java-11-openjdk-arm64/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
