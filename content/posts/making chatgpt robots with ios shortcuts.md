@@ -15,6 +15,9 @@ draft = true
 
 # shortcut
 - do prompt engineering in text box or in place to chatgpt
+- tell it to be brief and keep answer to 1 paragraph
+  - speeds up response
+  - chatgpt has a tendency to be very verbose - thinking out loud?
 
 # future endeavors
 - document search
