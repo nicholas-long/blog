@@ -50,7 +50,8 @@ head stopwords.grep
 ```
 
 # AWK-based markdown search engine
-My strategy for the search engine was to use the keywords to dynamically create an AWK program that scores each file based on keyword matches:
+My strategy for the search engine was to use the keywords to dynamically create an AWK program that scores each file based on keyword matches.
+Keywords are scored higher if they occur within the filename, as a tag, within a markdown heading.
 
 ```bash
 # the variable awkprogram is a temporary file containing the generated awk program
