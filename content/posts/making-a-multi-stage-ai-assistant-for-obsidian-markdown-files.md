@@ -95,12 +95,12 @@ Finally we must print out the list of files and pass it into ChatGPT.
 In this contrived example, my notes about my honeymoon have special markdown links to print the content of the daily notes from days while I was on the trip.
 To handle this, when printing the markdown files, we must also print out nested content "include" links (links in Obsidian starting with an exclamation point).
 
-- The prompt format is as follows:
-  - role
+The prompt format is as follows:
+- role
 ```
 Your job is to answer a question given the content of markdown files passed in. The file names of the markdown files contain date and timestamps, which could be useful for answering the question.
 ```
-  - prompt
+- prompt
 ```
 Query: [ query here ]
 
