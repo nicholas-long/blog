@@ -14,8 +14,10 @@ Such a model can be quickly integrated as an assistant into company workflow or 
 
 # Running Example Query
 Example ChatGPT prompt:
-> using the following SQLite schema, answer this question: which artist has the most sales?
-> ... insert schema here ...
+```
+using the following SQLite schema, answer this question: which artist has the most sales?
+... insert schema here ...
+```
 
 ## ChatGPT Results
 To determine which artist has the most sales based on the provided SQLite schema, we need to identify the artist with the highest total sales. The SQL query to achieve this involves selecting the artist's name from the "artists" table and summing the total sales from the "invoices" and "invoice_items" tables, joined with the "tracks" and "albums" tables based on the relationships established in the schema. The query below accomplishes this task:
