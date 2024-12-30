@@ -21,7 +21,7 @@ The approach that I used to accomplish this is made of several phases:
 - ask chatgpt to select files
 - ask the question in a prompt, including the filenames and full markdown content of all selected files
 
-# `grep` problems
+# `grep` Problems
 Inital testing for asking chatgpt to come up with `grep` patterns did not prove fruitful. The idea seems practical, but it does not always match the desired content.
 For example, for the question "where did i go out to eat on my honeymoon?", chatgpt came up wtih the following commands:
 ```bash
@@ -49,7 +49,7 @@ head stopwords.grep
 ^ableabout$
 ```
 
-# AWK-based markdown search engine
+# AWK-based Markdown Search Engine
 My strategy for the search engine was to use the keywords to dynamically create an AWK program that scores each file based on keyword matches.
 Keywords are scored higher if they occur within the filename, as a tag, within a markdown heading.
 
@@ -81,7 +81,7 @@ EOF
 ```
 This works to search the files and return the most relevant ones in order.
 
-# prompt for selecting files
+# Prompt for Selecting Files
 After we have the list of files, we pass this into ChatGPT to select the ones that appear most relevant for answering the question.
 Instead of having it write out filenames and introducing the possibility of mistakes, I number the lines and ask it to only return numbers.
 > given a query and a numbered list of files, return only the numbers for files which seem like they would be relevant for answering the query. return only the numbers, one per line, with no additional text.
@@ -90,7 +90,7 @@ Instead of having it write out filenames and introducing the possibility of mist
 chatgpt --model gpt-4o --role "given a query and a numbered list of files, return only the numbers for files which seem like they would be relevant for answering the query. return only the numbers, one per line, with no additional text."
 ```
 
-# final prompt
+# Final Prompt
 Finally we must print out the list of files and pass it into ChatGPT.
 In this contrived example, my notes about my honeymoon have special markdown links to print the content of the daily notes from days while I was on the trip.
 To handle this, when printing the markdown files, we must also print out nested content "include" links (links in Obsidian starting with an exclamation point).
@@ -126,7 +126,7 @@ During your mini-honeymoon, you went out to eat at the following places:
 These venues were part of your culinary experiences during the trip.
 ```
 
-## iOS shortcut
+## iOS Shortcut
 The iOS shortcut to power asking questions to this assistant is very simple.
 It uses my [chisel server trick]({{< ref "connecting-to-ssh-from-anywhere-using-chisel-pivot-server.md" >}}) for publicly exposing an SSH port of a machine running anywhere.
 This way, I am able to use the assistant as long as the machine is running and connected to any network or behind any firewall.
