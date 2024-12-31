@@ -15,7 +15,9 @@ Such a model can be quickly integrated as an assistant into company workflow or 
 
 # Running Example Query
 Include the full table schema after the question in a normal ChatGPT prompt or in the role text.
-Example ChatGPT prompt:
+- example question
+> which artist has the most sales?
+- Example ChatGPT prompt:
 ```
 using the following SQLite schema, answer this question: which artist has the most sales?
 ... insert schema here ...
