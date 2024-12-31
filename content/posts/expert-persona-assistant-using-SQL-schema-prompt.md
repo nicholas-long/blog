@@ -11,8 +11,10 @@ Such a model can be quickly integrated as an assistant into company workflow or 
 # Setup
 - example database: We will use the [example "chinook.db" SQLite database](https://www.sqlitetutorial.net/sqlite-sample-database/).
 - the schema for this database is provided at the end of this article for reference.
+- ChatGPT ( CLI )
 
 # Running Example Query
+Include the full table schema after the question in a normal ChatGPT prompt or in the role text.
 Example ChatGPT prompt:
 ```
 using the following SQLite schema, answer this question: which artist has the most sales?
