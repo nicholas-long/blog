@@ -5,9 +5,11 @@ draft = false
 +++
 
 As a developer looking for work in 2025, I have to send off potentially hundreds of job applications in order to get enough callbacks and interviews.
-It is tedious to read every job description. That sounds silly, but it is a huge problem when finding remote work.
+I also want to optimize my time spent reading or interacting with job boards to only invest time into the most relevant posts by rating each job and only focusing on the best-rated ones.
+Saving time reading through job board posts is an amazing improvement by itself, but this also has the effect of focusing my time on more important job posts.
 This experience is ongoing, so be sure to check back for any updates.
 
+It is tedious to read every job description. That sounds silly to complain about, but it is a huge problem when finding remote work.
 Consider that when searching for local jobs, you can filter and be specific with what you want, but for remote jobs, you must filter through all of the jobs in the country.
 Some jobs are not even remote even though they are labeled as such by the job boards, when it clearly specifies what their work conditions are in the job description.
 What I needed to make to solve this was a way to find a bunch of job postings with various keywords from an API, narrow them down, and rate them for relevance to my resume.
