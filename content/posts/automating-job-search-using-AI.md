@@ -46,7 +46,7 @@ I need to rate jobs on multiple criteria, and if only a short description is pro
 - contain the word remote, but are _not_ remote
 - do not pertain to my actual experience
 - require very specific experience with very specific frameworks
-  - (This is ridiculous - there is nothing new under the sun. Get over yourself, jobs, seriously... so what if i don't have experience with React or Next.js or whatever, I can do front-end development, and it's not like these things are hard to learn...)
+  - (I don't understand why this is necessary. It is not difficult to learn new frameworks if you have experience in programming and similar frameworks.)
 
 So anyway, I need to scrape the full job description. I am doing this with a quick python script to get JSON data from the Adzuna landing page for each job.
 
