@@ -5,13 +5,13 @@ draft = true
 +++
 
 # intro
+- update this? i don't interact with chatgpt this way very much anymore.
 - prompt engineering
 - use shortcuts to call APIs or run services within other apps
   - actions within shortcuts running from Siri need to return within 15 seconds (per action?)
 - install ChatGPT app
 - defualt iOS shortcut action installed: "ask chatgpt" which starts a two-way dialogue
   - but once again: actions within shortcuts running from Siri need to return within 15 seconds (per action?)
-- [ ] get screenshots of shortcut
 
 # shortcut
 - do prompt engineering in text box or in place to chatgpt
