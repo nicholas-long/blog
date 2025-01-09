@@ -90,11 +90,12 @@ Once a job is selected, I launch the page in the browser, and prompt for
 - ignoring job
 - writing a cover letter
 
-## Writing Cover Letter
+## Automatically Writing Cover Letters
 If I choose to write a cover letter, it is written using a ChatGPT prompt, saved to a file, and copied to the clipboard.
 Then I can easily export the cover letter from Google Drive or paste it directly into a field if the application is designed that way.
 ```bash
 # $filename stores the name of the local file to store the cover letter.
+
 ./prompt-for "$id" | chatgpt --model gpt-4o --role 'Your job is to write a short, complete cover letter for a candidate given the candidate description and job description.
 This cover letter is for dropping in place in an online job application.
 Do not include an address header.
