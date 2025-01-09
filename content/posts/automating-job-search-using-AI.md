@@ -78,7 +78,7 @@ Negative ratings should count against the score and be comprised of:
 ```
 
 # Automating Workflow
-- [screenshot of text user interface workflow](/fzf-job-hunt-workflow.jpg)
+![screenshot of text user interface workflow](/fzf-job-hunt-workflow.jpg)
 I like automating everything.
 I even want to automate launching the browser to the specific job and writing a cover letter if the application requires it.
 Eventually, I could move some of this stuff into a web app, but the simplest way I have found to rapid-prototype some workflow shortcuts is a bash script that calls `fzf` in a loop and reacts on the selections.
